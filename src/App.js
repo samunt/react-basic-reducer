@@ -1,5 +1,5 @@
 import React, {useReducer} from 'react';
-function reducer(state, action) {
+function countReducer(state, action) {
     switch(action.type) {
         case "INCREMENT":
             return {count: state.count + action.amount};
@@ -14,7 +14,7 @@ function reducer(state, action) {
 }
 
 function App() {
-   const [state, dispatch] = useReducer(reducer, {count: 0})
+   const [state, dispatch] = useReducer(countReducer, {count: 0})
   return (
     <div className="App">
         <h1>{state.count}</h1>
